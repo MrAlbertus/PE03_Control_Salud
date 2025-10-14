@@ -66,7 +66,7 @@ public class PE03_Control_Salut {
                 while (!(edad > 0 && edad <= 120 && edad > -1)) {
                 System.out.println("Quina es la teva edad: ");
                 edad = Scanner1.nextInt();
-                if (!(edad <=120)) {
+                if (!(edad <=120 && edad >-1 )) {
                     System.out.println("Error: La edat introduida no es valida.");
                 }
                 }
@@ -108,9 +108,15 @@ public class PE03_Control_Salut {
                         try {
                             System.out.println("\n");
 
-                            System.out.println("Has seleccionat 'Nom'");
+                            System.out.println("Has seleccionat 'Nom i Cognoms'");
                             System.out.println("Introdueix el nou Nom: ");
                             nom = Scanner1.next();
+
+                            System.out.println("Introdueix el 1r Cognom: ");
+                            cognom1 = Scanner1.next();
+
+                            System.out.println("Introdueix el 2n Cognom: ");
+                            cognom2 = Scanner1.next();
 
                         } catch (InputMismatchException e) {
                             System.out.println("Error: Completa els camps amb les dades correctes");
@@ -119,6 +125,7 @@ public class PE03_Control_Salut {
                         
                         case "b":
                         try {
+                            edad = 0;
                             System.out.println("\n");
 
                             while (!(edad > 0 && edad <= 120 && edad > -1)) {
@@ -135,12 +142,30 @@ public class PE03_Control_Salut {
                         
                         case "c":
                         try{
+                            pes = 0;
                             System.out.println("\n");
                             while (!(pes > 0 && pes <=400 && pes > -1)) {
                                 
                             System.out.println("Has seleccionat 'Pes'");
                             System.out.println("Introdueix el nou Pes: ");
                             pes = Scanner1.nextInt();
+                            }
+
+                        } catch (InputMismatchException e) {
+                            System.out.println("Error: Completa els camps amb les dades correctes");
+                        }
+                            break;
+
+                        case "d":
+                        try {
+                            alçada = 0;
+                            System.out.println("\n");
+
+                            while (!(alçada > 10 && alçada < 250 && alçada > -1)) {
+                                
+                            System.out.println("Has seleccionat 'Alçada'");
+                            System.out.println("Introdueix la nova Alçada: ");
+                            alçada = Scanner1.nextInt();
                             }
 
                         } catch (InputMismatchException e) {
