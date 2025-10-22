@@ -234,5 +234,3 @@ public class PE03_Control_Salut {
 
     }
 }
-
-//NECESITO PONER TRY/CATCH EN CADA SWITCH
